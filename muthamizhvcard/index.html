@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clenzzo - Muthamizh Selvan S Digital Business Card</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Custom Tailwind theme configuration
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-teal': '#0D9488',
+                        'brand-teal-light': '#2DD4BF',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        /* Custom styles for the page */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* bg-slate-900 */
+        }
+        /* Style for the toast notification */
+        #toast-notification {
+            transition: opacity 0.3s, transform 0.3s;
+            transform: translateY(20px);
+        }
+        #toast-notification.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 min-h-screen flex items-center justify-center p-4">
+    <!-- Background Glow Effect -->
+    <div class="absolute top-0 left-0 -translate-x-1/4 -translate-y-1/4 w-96 h-96 bg-brand-teal/30 rounded-full blur-3xl opacity-50"></div>
+    <div class="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 w-96 h-96 bg-brand-teal/30 rounded-full blur-3xl opacity-50"></div>
+
+    <main class="w-full max-w-sm bg-slate-800/50 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl overflow-hidden animate-fade-in-up my-8 relative z-10">
+        <!-- Card Container -->
+        <div class="p-8">
+             <div class="flex justify-center mb-6">
+                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop,q=95/dOqZx0gxjnC3l2xQ/blasset-6-2x-8-AMqDPMxZ9qUpzDpa.png" alt="Clenzzo Logo" class="h-12">
+            </div>
+
+            <!-- Muthamizh Selvan S Card -->
+            <div id="card-muthamizh">
+                <div class="text-center">
+                    <!-- Profile Photo Placeholder (Letter Icon) -->
+                    <div class="w-28 h-28 rounded-full mx-auto mb-5 border-4 border-slate-700/50 shadow-lg bg-gradient-to-br from-brand-teal to-brand-teal-light flex items-center justify-center">
+                        <span class="text-4xl font-bold text-white">M</span>
+                    </div>
+                    
+                    <h1 class="text-2xl font-bold text-white tracking-tight">Muthamizh Selvan S</h1>
+                    <p class="text-brand-teal-light mt-1 font-medium">Customer Relationship Executive</p>
+                    <p class="text-sm text-white/60 mt-2">Clenzzo Cleaning Services Private Limited</p>
+                </div>
+
+                <div class="mt-8">
+                    <button onclick="downloadVCard('muthamizh')" class="w-full bg-gradient-to-r from-brand-teal to-brand-teal-light text-white font-semibold py-3 px-4 rounded-xl hover:scale-105 active:scale-100 focus:ring-4 focus:ring-teal-300/50 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-brand-teal/20">
+                        <i data-lucide="download"></i>
+                        <span>Save Contact</span>
+                    </button>
+                </div>
+                
+                <div class="mt-4 grid grid-cols-3 gap-3 text-center">
+                    <a href="https://www.clenzzo.com" target="_blank" rel="noopener noreferrer" class="bg-slate-700/50 hover:bg-slate-700/80 p-3 rounded-xl transition-all group">
+                        <i data-lucide="globe" class="text-white/70 group-hover:text-white mx-auto"></i>
+                        <span class="text-xs text-white/70 group-hover:text-white mt-1 block">Website</span>
+                    </a>
+                    <a href="https://book.clenzzo.com" target="_blank" rel="noopener noreferrer" class="bg-slate-700/50 hover:bg-slate-700/80 p-3 rounded-xl transition-all group">
+                         <i data-lucide="calendar-plus" class="text-white/70 group-hover:text-white mx-auto"></i>
+                        <span class="text-xs text-white/70 group-hover:text-white mt-1 block">Booking</span>
+                    </a>
+                    <a href="https://maps.app.goo.gl/CGfCmxJpq5LB4bWB8?g_st=ic" target="_blank" rel="noopener noreferrer" class="bg-slate-700/50 hover:bg-slate-700/80 p-3 rounded-xl transition-all group">
+                        <i data-lucide="map-pin" class="text-white/70 group-hover:text-white mx-auto"></i>
+                        <span class="text-xs text-white/70 group-hover:text-white mt-1 block">Directions</span>
+                    </a>
+                </div>
+
+                <div class="mt-8 pt-6 border-t border-white/10 text-left space-y-5">
+                    <a href="tel:+916374722954" class="flex items-center space-x-4 text-white/80 group">
+                         <i data-lucide="phone" class="h-5 w-5 text-white/50 group-hover:text-brand-teal-light transition-colors"></i>
+                        <span class="group-hover:text-white transition-colors">+91 6374 722 954</span>
+                    </a>
+                    <a href="mailto:support@clenzzo.com" class="flex items-center space-x-4 text-white/80 group">
+                        <i data-lucide="mail" class="h-5 w-5 text-white/50 group-hover:text-brand-teal-light transition-colors"></i>
+                        <span class="group-hover:text-white transition-colors">support@clenzzo.com</span>
+                    </a>
+                    <div class="flex items-start space-x-4 text-white/80">
+                        <i data-lucide="building-2" class="h-5 w-5 text-white/50 flex-shrink-0 mt-1"></i>
+                        <p class="text-sm">PM Towers, 1st Floor 7th Cross North East Extension Thennur, Thillainagar Trichy-620018</p>
+                    </div>
+                </div>
+                 <div class="mt-8 pt-6 border-t border-white/10 text-center">
+                    <p class="text-sm text-white/50 mb-4">Connect with Clenzzo</p>
+                    <div class="flex justify-center space-x-8">
+                        <a href="https://www.linkedin.com/company/clenzzo" target="_blank" rel="noopener noreferrer" class="text-white/50 hover:text-white transition-transform hover:scale-110">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/clenzzoindia?igsh=OWU4YXowbjE5YmZi&utm_source=qr" target="_blank" rel="noopener noreferrer" class="text-white/50 hover:text-white transition-transform hover:scale-110">
+                            <i data-lucide="instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="p-4 bg-slate-900/50 text-center border-t border-white/10">
+            <button onclick="shareCard()" class="text-brand-teal-light hover:text-teal-300 font-semibold text-sm transition-colors">
+                Share This Card
+            </button>
+        </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="fixed bottom-5 right-5 bg-slate-700 text-white py-2 px-4 rounded-lg shadow-lg opacity-0 z-50">
+        Link copied to clipboard!
+    </div>
+
+    <script>
+        lucide.createIcons();
+        
+        // Store user data
+        const users = {
+            muthamizh: {
+                firstName: 'Muthamizh Selvan',
+                lastName: 'S',
+                title: 'Customer Relationship Executive',
+                phone: '+916374722954',
+                email: 'support@clenzzo.com',
+                website: 'https://www.clenzzo.com',
+                address: {
+                    street: 'PM Towers, 1st Floor 7th Cross North East Extension Thennur',
+                    city: 'Thillainagar Trichy',
+                    state: 'Tamil Nadu',
+                    zip: '620018',
+                    country: 'India'
+                }
+            }
+        };
+
+        /**
+         * Generates and downloads a .vcf contact card file.
+         */
+        function downloadVCard(key) {
+            const person = users[key];
+            if (!person) { return; }
+
+            const vCard = `BEGIN:VCARD
+VERSION:3.0
+FN:${person.firstName} ${person.lastName}
+N:${person.lastName};${person.firstName};;;
+ORG:Clenzzo Cleaning Services Private Limited
+TITLE:${person.title}
+TEL;TYPE=WORK,VOICE:${person.phone}
+EMAIL;TYPE=PREF,INTERNET:${person.email}
+URL:${person.website}
+ADR;TYPE=WORK:;;${person.address.street};${person.address.city};${person.address.state};${person.address.zip};${person.address.country}
+END:VCARD`;
+
+            const blob = new Blob([vCard], { type: 'text/vcard;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', `${person.firstName.replace(/\s+/g, '_')}_${person.lastName}.vcf`);
+            document.body.appendChild(link);
+            link.click();
+            
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        }
+
+        /**
+         * Shows a toast notification message.
+         */
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('toast-notification');
+            toast.textContent = message;
+            
+            toast.classList.remove('bg-slate-700', 'bg-red-600');
+            toast.classList.add(isError ? 'bg-red-600' : 'bg-slate-700');
+            
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        /**
+         * Shares the card using the Web Share API or copies the link as a fallback.
+         */
+        function shareCard() {
+            const shareTitle = 'Clenzzo Digital Business Card - Muthamizh Selvan S';
+            const shareUrl = window.location.href;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: shareTitle,
+                    text: 'Here is the digital business card for Muthamizh Selvan S from Clenzzo.',
+                    url: shareUrl
+                }).catch(console.error);
+            } else {
+                // Fallback for clipboard
+                const dummy = document.createElement('input');
+                document.body.appendChild(dummy);
+                dummy.value = shareUrl;
+                dummy.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummy);
+                showToast('Link copied to clipboard!');
+            }
+        }
+    </script>
+</body>
+</html>
+
